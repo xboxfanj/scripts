@@ -13,6 +13,8 @@ DEBIAN_10_PACKAGES="libncurses5"
 DEBIAN_11_PACKAGES="libncurses5"
 PACKAGES=""
 
+echo DEBIAN_FRONTEND=noninteractive
+
 sudo apt install software-properties-common -y
 sudo apt update
 
@@ -31,8 +33,7 @@ elif [[ ${LSB_RELEASE} =~ "Debian GNU/Linux 11" ]]; then
     PACKAGES="${DEBIAN_11_PACKAGES}"
 fi
 
-sudo DEBIAN_FRONTEND=noninteractive \
-    apt install \
+sudo apt install \
     adb autoconf automake axel bc bison build-essential \
     ccache clang cmake curl expat fastboot flex g++ \
     g++-multilib gawk gcc gcc-multilib git gnupg gperf \
