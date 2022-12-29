@@ -74,5 +74,5 @@ sudo chmod a+rx /usr/local/bin/repo
 echo performance | tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor
 echo 1 > /sys/devices/system/cpu/cpufreq/boost
 
-git config --global user.name "Paranoid Android"
-git config --global user.email "build@aospa.local"
+git config --global user.name "Jake Weinstein"
+git config --global user.email "jake@aospa.co"
